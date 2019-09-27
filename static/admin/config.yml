@@ -19,7 +19,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: "relation"
         collection: "author"
         searchFields: ["name.first", "twitterHandle"]
-        valueField: "name.first"
+        valueField: "id"
         displayFields: ["twitterHandle", "followerCount"]
       - {
           label: "Author",
@@ -36,11 +36,12 @@ collections: # A list of collections the CMS should be able to edit
           required: false,
         }
   - name: "author"
-    identifier_field: "name.first"
+    identifier_field: "id"
     label: "Author"
     folder: "data/author"
     create: true
     fields:
+      - { label: "ID", name: "id", widget: "string" }
       - { label: "Twitter Handle", name: "twitterHandle", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Avatar", name: "avatar", widget: "image", required: true }
