@@ -106,6 +106,7 @@ images =
     , github = (buildImage [ "github.svg" ])
     , iconPng = (buildImage [ "icon-png.png" ])
     , icon = (buildImage [ "icon.svg" ])
+    , photo1569491940336770914f5fa38 = (buildImage [ "photo-1569491940336-770914f5fa38.jpeg" ])
     , directory = directoryWithoutIndex []
     }
 
@@ -118,6 +119,7 @@ allImages =
     , (buildImage [ "github.svg" ])
     , (buildImage [ "icon-png.png" ])
     , (buildImage [ "icon.svg" ])
+    , (buildImage [ "photo-1569491940336-770914f5fa38.jpeg" ])
     ]
 
 
@@ -152,7 +154,7 @@ content =
     } )
   ,
   ( ["blog", "hello"]
-    , { frontMatter = """{"type":"blog","author":"Dillon Kearns","title":"Hello `elm-pages`! 🚀","description":"Here's an intro for my blog post to get you interested in reading more...","image":"/images/article-covers/hello.jpg","published":"2019-09-21"}
+    , { frontMatter = """{"type":"blog","author":"Dillon Kearns","title":"Hello! 😸","published":"2019-09-21","description":"Here's an intro for my blog post to get you interested in reading more...","image":"/images/photo-1569491940336-770914f5fa38.jpeg"}
 """ , body = Nothing
     , extension = "md"
     } )

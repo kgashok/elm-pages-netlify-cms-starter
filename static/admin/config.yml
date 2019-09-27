@@ -14,7 +14,12 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Publish Date", name: "published", widget: "date" }
       - { label: "Intro Blurb", name: "description", widget: "text" }
       - { label: "Image", name: "image", widget: "image", required: true }
-      - { label: "Author", name: "author", widget: "string", default: "dillon" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Dillon Kearns",
+        }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
           label: "Type",

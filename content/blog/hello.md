@@ -1,6 +1,6 @@
 ---
 type: blog
-author: dillon
+author: Dillon Kearns
 title: "Hello! \U0001F638"
 published: "2019-09-21"
 description: Here's an intro for my blog post to get you interested in reading more...
