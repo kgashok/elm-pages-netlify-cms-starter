@@ -14,6 +14,13 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Publish Date", name: "published", widget: "date" }
       - { label: "Intro Blurb", name: "description", widget: "text" }
       - { label: "Image", name: "image", widget: "image", required: true }
+      - label: "Post Author"
+        name: "newAuthor"
+        widget: "relation"
+        collection: "author"
+        searchFields: ["name.first", "twitterHandle"]
+        valueField: "name.first"
+        displayFields: ["twitterHandle", "followerCount"]
       - {
           label: "Author",
           name: "author",
@@ -28,3 +35,19 @@ collections: # A list of collections the CMS should be able to edit
           default: "blog",
           required: false,
         }
+  - name: "author"
+    label: "Author"
+    folder: "data/author"
+    create: true
+    fields:
+      - { label: "First", name: "first", widget: "string" }
+      - { label: "Last", name: "last", widget: "string" }
+      - { label: "Twitter Handle", name: "twitterHandle", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Avatar", name: "avatar", widget: "image", required: true }
+      - label: "Name"
+        name: "name"
+        widget: "object"
+        fields:
+          - { label: "First", name: "first", widget: "string" }
+          - { label: "Last", name: "last", widget: "string" }
