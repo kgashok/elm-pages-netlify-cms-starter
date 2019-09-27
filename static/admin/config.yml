@@ -36,6 +36,7 @@ collections: # A list of collections the CMS should be able to edit
           required: false,
         }
   - name: "author"
+    identifier_field: "name.first"
     label: "Author"
     folder: "data/author"
     create: true
