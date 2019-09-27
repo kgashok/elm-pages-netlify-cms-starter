@@ -40,8 +40,6 @@ collections: # A list of collections the CMS should be able to edit
     folder: "data/author"
     create: true
     fields:
-      - { label: "First", name: "first", widget: "string" }
-      - { label: "Last", name: "last", widget: "string" }
       - { label: "Twitter Handle", name: "twitterHandle", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Avatar", name: "avatar", widget: "image", required: true }
