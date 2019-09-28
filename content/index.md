@@ -3,6 +3,9 @@ title: elm-pages-starter - a simple blog starter
 type: page
 ---
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dillonkearns/elm-pages-netlify-cms-starter&stack=cms)
+☝️ Fork and deploy this site in one click! 📚
+
 This is an example repo to get you up and running with `elm-pages`.
 
 The entrypoint file is `index.js`. That file imports `src/Main.elm`. The `content` folder is turned into your static pages. The rest is mostly determined by logic in the Elm code! Learn more with the resources below.
