@@ -7,12 +7,17 @@ type: page
 
 ☝️ Fork and deploy this site in one click! 📚
 
-## Trying Out Netlify CMS
+## Trying Out Netlify CMS admin console
 
 This site is configured to allow anyone to go into the admin console and propose an edit or new page. If you click propose, it will result in a pull request (feel free to propose a real change you'd like to suggest to these docs, but please don't click it if you're just testing it out!). It's a great way to quickly see what the console looks like. You just sign up using a simple Github Oauth flow!
 
 [Check out this sites admin panel here](/admin).
 
+## Recommended: set up Github or other auth provider
+
+After clicking "Deploy to netlify", I recommend checking the "Github" option to add Github oauth for your newly deployed app. That way you don't need to sign up for an account and confirm your email address. Full instructions are at [netlify.com/docs/identity/#external-provider-login](https://www.netlify.com/docs/identity/#external-provider-login).
+
+## About `elm-pages`
 
 This is an example repo to get you up and running with `elm-pages`.
 
