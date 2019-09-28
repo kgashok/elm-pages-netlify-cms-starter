@@ -15,6 +15,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "published", widget: "datetime", timeFormat: false }
       - { label: "Intro Blurb", name: "description", widget: "text" }
+      - { label: "Is Draft (Hide from index view)", name: "draft", widget: "boolean", default: false }
       - { label: "Image", name: "image", widget: "image", required: true }
       - label: "Post Author"
         name: "author"
