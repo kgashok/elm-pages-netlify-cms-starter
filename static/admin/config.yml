@@ -30,3 +30,18 @@ collections: # A list of collections the CMS should be able to edit
           default: "blog",
           required: false,
         }
+  - name: "page" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Page" # Used in the UI, ie.: "New Post"
+    folder: "content" # The path to the folder where the documents are stored
+    filter: {field: "type", value: "page"}
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Type",
+          name: "type",
+          widget: "hidden",
+          default: "blog",
+          required: false,
+        }
