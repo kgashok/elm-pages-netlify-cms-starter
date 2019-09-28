@@ -3,30 +3,24 @@ backend:
 
 media_folder: "images" # Folder where user uploaded files should go
 public_folder: "images"
+publish_mode: "editorial_workflow"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "content/blog" # The path to the folder where the documents are stored
+    filter: {field: "type", value: "blog"}
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "published", widget: "date" }
+      - { label: "Publish Date", name: "published", widget: "datetime", timeFormat: false }
       - { label: "Intro Blurb", name: "description", widget: "text" }
       - { label: "Image", name: "image", widget: "image", required: true }
       - label: "Post Author"
-        name: "newAuthor"
-        widget: "relation"
-        collection: "author"
-        searchFields: ["name.first", "twitterHandle"]
-        valueField: "id"
-        displayFields: ["twitterHandle", "followerCount"]
-      - {
-          label: "Author",
-          name: "author",
-          widget: "string",
-          default: "Dillon Kearns",
-        }
+        name: "author"
+        widget: "select"
+        options: ["Dillon Kearns"]
+        default: "Dillon Kearns"
       - { label: "Body", name: "body", widget: "markdown" }
       - {
           label: "Type",
@@ -35,19 +29,3 @@ collections: # A list of collections the CMS should be able to edit
           default: "blog",
           required: false,
         }
-  - name: "author"
-    identifier_field: "id"
-    label: "Author"
-    folder: "data/author"
-    create: true
-    fields:
-      - { label: "ID", name: "id", widget: "string" }
-      - { label: "Twitter Handle", name: "twitterHandle", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Avatar", name: "avatar", widget: "image", required: true }
-      - label: "Name"
-        name: "name"
-        widget: "object"
-        fields:
-          - { label: "First", name: "first", widget: "string" }
-          - { label: "Last", name: "last", widget: "string" }
