@@ -34,12 +34,12 @@ manifest =
     , categories = [ Pages.Manifest.Category.education ]
     , displayMode = Manifest.Standalone
     , orientation = Manifest.Portrait
-    , description = "elm-pages-starter - A statically typed site generator."
+    , description = "A starter kit for Netlify CMS and elm-pages."
     , iarcRatingId = Nothing
-    , name = "elm-pages-starter"
+    , name = "elm-pages-netlify-cms-starter"
     , themeColor = Just Color.white
     , startUrl = pages.index
-    , shortName = Just "elm-pages-starter"
+    , shortName = Just "elm-pages-netlify-cms"
     , sourceIcon = images.iconPng
     }
 
@@ -291,7 +291,7 @@ head metadata =
         Metadata.Page meta ->
             Seo.summaryLarge
                 { canonicalUrlOverride = Nothing
-                , siteName = "elm-pages-starter"
+                , siteName = siteName
                 , image =
                     { url = images.iconPng
                     , alt = "elm-pages logo"
@@ -307,7 +307,7 @@ head metadata =
         Metadata.Article meta ->
             Seo.summaryLarge
                 { canonicalUrlOverride = Nothing
-                , siteName = "elm-pages starter"
+                , siteName = siteName
                 , image =
                     { url = meta.image
                     , alt = meta.description
@@ -344,7 +344,7 @@ head metadata =
             in
             Seo.summary
                 { canonicalUrlOverride = Nothing
-                , siteName = "elm-pages-starter"
+                , siteName = siteName
                 , image =
                     { url = meta.avatar
                     , alt = meta.name ++ "'s elm-pages articles."
@@ -364,7 +364,7 @@ head metadata =
         Metadata.BlogIndex ->
             Seo.summaryLarge
                 { canonicalUrlOverride = Nothing
-                , siteName = "elm-pages"
+                , siteName = siteName
                 , image =
                     { url = images.iconPng
                     , alt = "elm-pages logo"
@@ -385,7 +385,7 @@ canonicalSiteUrl =
 
 siteTagline : String
 siteTagline =
-    "Starter blog for elm-pages"
+    "Starter blog for elm-pages and Netlify CMS."
 
 
 publishedDateView metadata =
@@ -419,3 +419,8 @@ elmDocsLink =
                 ]
                 { src = ImagePath.toString Pages.images.elmLogo, description = "Elm Package Docs" }
         }
+
+
+siteName : String
+siteName =
+    "elm-pages-netlify-cms-starter"
