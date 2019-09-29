@@ -13,22 +13,22 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "published", widget: "datetime", timeFormat: false }
+      - { label: "Publish Date", name: "published", widget: "datetime", timeFormat: false, format: "YYYY-MM-DD" }
       - { label: "Intro Blurb", name: "description", widget: "text" }
-      - { label: "Is Draft (Hide from index view)", name: "draft", widget: "boolean", default: false }
+      - { label: "Is Draft (Hide from index view)", name: "draft", widget: "boolean", default: false, required: false }
       - { label: "Image", name: "image", widget: "image", required: true }
       - label: "Post Author"
         name: "author"
         widget: "select"
         options: ["Dillon Kearns"]
+        required: false
         default: "Dillon Kearns"
       - { label: "Body", name: "body", widget: "markdown" }
       - {
           label: "Type",
           name: "type",
           widget: "hidden",
-          default: "blog",
-          required: false,
+          default: "blog"
         }
   - name: "page" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Page" # Used in the UI, ie.: "New Post"
@@ -42,6 +42,5 @@ collections: # A list of collections the CMS should be able to edit
           label: "Type",
           name: "type",
           widget: "hidden",
-          default: "blog",
-          required: false,
+          default: "blog"
         }
