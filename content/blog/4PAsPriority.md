@@ -1,4 +1,12 @@
 
+---
+type: blog  
+author: Ashok B  
+title: "4P is the priority \U0001F638"  
+published: "2019-10-15"  
+description: And why is this all so editable...  
+---
+
 # 4P must be the Priority
 
 *Character and Intelligence are two main objectives of education. If I had to choose between either one of them, I would go with character, any day.*
