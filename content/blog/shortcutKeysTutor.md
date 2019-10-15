@@ -1,3 +1,13 @@
+
+---
+type: blog
+author: Ashok B
+title: "The Challenge \U0001F638"
+published: "2019-10-16"
+description: And why is this all so editable...
+
+---
+
 # The Challenge
 Explained in the video http://j.mp/tutorChallenge
 
