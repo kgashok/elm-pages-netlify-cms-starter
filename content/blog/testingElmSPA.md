@@ -1,4 +1,3 @@
-
 ---
 type: blog
 author: Dillon Kearns
