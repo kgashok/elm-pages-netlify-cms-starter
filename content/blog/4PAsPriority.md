@@ -1,10 +1,3 @@
----
-type: blog
-author: Ashok B
-title: "4P is the Priority \U0001F638"
-published: "2019-10-15"
-description: And why is this all so editable...
----
 
 # 4P must be the Priority
 
